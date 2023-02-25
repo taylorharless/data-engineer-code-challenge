@@ -1,0 +1,102 @@
+digraph G {
+        graph [
+            nodesep=0.5;
+            rankdir="LR";
+            cencentrate=true;
+            splines="spline";
+            fontname="Helvetica";
+            pad="0.2,0.2",
+            label="",
+
+        ];
+
+        node [shape=plain, fontname="Helvetica"];
+        edge [
+            dir=both,
+            fontsize=12,
+            arrowsize=0.9,
+            penwidth=1.0,
+            labelangle=32,
+            labeldistance=1.8,
+            fontname="Helvetica"
+        ];
+
+	 attendances [ label=<
+        <table border="0" cellborder="1" cellspacing="0">
+        <tr><td bgcolor="pink"><b>attendances</b></td></tr>
+        
+		<tr><td port="attendance_id" align="left" cellpadding="5">attendance_id <font color="grey60">int64</font></td></tr>
+		<tr><td port="event_id" align="left" cellpadding="5">event_id <font color="grey60">int64</font></td></tr>
+		<tr><td port="timeslot_id" align="left" cellpadding="5">timeslot_id <font color="grey60">int64</font></td></tr>
+		<tr><td port="user_id" align="left" cellpadding="5">user_id <font color="grey60">int64</font></td></tr>
+		<tr><td port="created_date" align="left" cellpadding="5">created_date <font color="grey60">int64</font></td></tr>
+		<tr><td port="modified_date" align="left" cellpadding="5">modified_date <font color="grey60">int64</font></td></tr>
+		<tr><td port="rating" align="left" cellpadding="5">rating <font color="grey60">object</font></td></tr>
+		<tr><td port="custom_signup_field_values" align="left" cellpadding="5">custom_signup_field_values <font color="grey60">object</font></td></tr>
+		<tr><td port="feedback" align="left" cellpadding="5">feedback <font color="grey60">object</font></td></tr>
+		<tr><td port="status" align="left" cellpadding="5">status <font color="grey60">object</font></td></tr>
+		<tr><td port="attended" align="left" cellpadding="5">attended <font color="grey60">object</font></td></tr>
+		</table>>];
+
+	 timeslots [ label=<
+        <table border="0" cellborder="1" cellspacing="0">
+        <tr><td bgcolor="skyblue"><b>timeslots</b></td></tr>
+        
+		<tr><td port="timeslot_id" align="left" cellpadding="5">timeslot_id <font color="grey60">int64</font></td></tr>
+		<tr><td port="end_date" align="left" cellpadding="5">end_date <font color="grey60">int64</font></td></tr>
+		<tr><td port="start_date" align="left" cellpadding="5">start_date <font color="grey60">int64</font></td></tr>
+		<tr><td port="is_full" align="left" cellpadding="5">is_full <font color="grey60">bool</font></td></tr>
+		<tr><td port="instructions" align="left" cellpadding="5">instructions <font color="grey60">object</font></td></tr>
+		</table>>];
+
+	 people [ label=<
+        <table border="0" cellborder="1" cellspacing="0">
+        <tr><td bgcolor="skyblue"><b>people</b></td></tr>
+        
+		<tr><td port="user_id" align="left" cellpadding="5">user_id <font color="grey60">int64</font></td></tr>
+		<tr><td port="given_name" align="left" cellpadding="5">given_name <font color="grey60">object</font></td></tr>
+		<tr><td port="family_name" align="left" cellpadding="5">family_name <font color="grey60">object</font></td></tr>
+		<tr><td port="sms_opt_in_status" align="left" cellpadding="5">sms_opt_in_status <font color="grey60">object</font></td></tr>
+		<tr><td port="created_date" align="left" cellpadding="5">created_date <font color="grey60">int64</font></td></tr>
+		<tr><td port="modified_date" align="left" cellpadding="5">modified_date <font color="grey60">int64</font></td></tr>
+		<tr><td port="blocked_date" align="left" cellpadding="5">blocked_date <font color="grey60">float64</font></td></tr>
+		</table>>];
+
+	 events [ label=<
+        <table border="0" cellborder="1" cellspacing="0">
+        <tr><td bgcolor="skyblue"><b>events</b></td></tr>
+        
+		<tr><td port="event_id" align="left" cellpadding="5">event_id <font color="grey60">int64</font></td></tr>
+		<tr><td port="accessibility_notes" align="left" cellpadding="5">accessibility_notes <font color="grey60">object</font></td></tr>
+		<tr><td port="approval_status" align="left" cellpadding="5">approval_status <font color="grey60">object</font></td></tr>
+		<tr><td port="created_by_volunteer_host" align="left" cellpadding="5">created_by_volunteer_host <font color="grey60">bool</font></td></tr>
+		<tr><td port="modified_date" align="left" cellpadding="5">modified_date <font color="grey60">float64</font></td></tr>
+		<tr><td port="event_campaign" align="left" cellpadding="5">event_campaign <font color="grey60">float64</font></td></tr>
+		<tr><td port="instructions" align="left" cellpadding="5">instructions <font color="grey60">object</font></td></tr>
+		<tr><td port="timezone" align="left" cellpadding="5">timezone <font color="grey60">object</font></td></tr>
+		<tr><td port="virtual_action_url" align="left" cellpadding="5">virtual_action_url <font color="grey60">object</font></td></tr>
+		<tr><td port="featured_image_url" align="left" cellpadding="5">featured_image_url <font color="grey60">object</font></td></tr>
+		<tr><td port="browser_url" align="left" cellpadding="5">browser_url <font color="grey60">object</font></td></tr>
+		<tr><td port="tags" align="left" cellpadding="5">tags <font color="grey60">float64</font></td></tr>
+		<tr><td port="title" align="left" cellpadding="5">title <font color="grey60">object</font></td></tr>
+		<tr><td port="event_type" align="left" cellpadding="5">event_type <font color="grey60">object</font></td></tr>
+		<tr><td port="summary" align="left" cellpadding="5">summary <font color="grey60">object</font></td></tr>
+		<tr><td port="address_visibility" align="left" cellpadding="5">address_visibility <font color="grey60">object</font></td></tr>
+		<tr><td port="high_priority" align="left" cellpadding="5">high_priority <font color="grey60">float64</font></td></tr>
+		<tr><td port="created_date" align="left" cellpadding="5">created_date <font color="grey60">float64</font></td></tr>
+		<tr><td port="accessibility_status" align="left" cellpadding="5">accessibility_status <font color="grey60">object</font></td></tr>
+		<tr><td port="visibility" align="left" cellpadding="5">visibility <font color="grey60">object</font></td></tr>
+		<tr><td port="timeslots" align="left" cellpadding="5">timeslots <font color="grey60">float64</font></td></tr>
+		<tr><td port="is_virtual" align="left" cellpadding="5">is_virtual <font color="grey60">bool</font></td></tr>
+		<tr><td port="description" align="left" cellpadding="5">description <font color="grey60">object</font></td></tr>
+		</table>>];
+
+	 attendances:timeslot_id->timeslots:timeslot_id [ 
+                        arrowhead=ocrow, arrowtail=none];
+
+	 attendances:user_id->people:user_id [ 
+                        arrowhead=ocrow, arrowtail=none];
+
+	 attendances:event_id->events:event_id [ 
+                        arrowhead=ocrow, arrowtail=none];
+	}
